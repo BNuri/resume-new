@@ -1,0 +1,126 @@
+@import "./utils/mixin";
+@import "./utils/variables";
+
+@include mobile {
+  .section {
+    width: 90%;
+  }
+  .section__project {
+    flex-direction: column;
+    align-items: start !important;
+    padding: 20px 0px !important;
+
+    header,
+    &-content {
+      width: 100% !important;
+    }
+  }
+}
+
+@include tablet {
+  .section {
+    width: 60%;
+  }
+}
+
+@include desktop {
+  .section {
+    width: 70%;
+  }
+}
+
+.section {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.2s linear;
+}
+
+.section__title {
+  padding-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  border-bottom: 2px solid #4a4a4a;
+}
+
+.section__title-s {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section__subtitle,
+.section__project-title{
+  padding: 10px 0px;
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.section__subtitle-s,
+.section__project-subtitle{
+  display: block;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+.certificate-content {
+  padding: 20px 10px;
+  border-bottom: 1px dashed #4a4a4a;
+}
+
+.section__project {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #4a4a4a;
+
+  header,
+  &-content {
+    line-height: 1.4;
+  }
+
+  header {
+    width: 40%;
+  }
+
+  a {
+    padding-left: 10px;
+  }
+
+  svg {
+    height: 18px;
+    width: 18px;
+  }
+
+  &-content {
+    padding-left: 10px;
+    width: 60%;
+  }
+
+  &-desc li:before {
+    content: "- ";
+  }
+
+  &-stack {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+
+    li {
+      padding: 3px 7px;
+      border-radius: 5px;
+      margin: 3px 3px 3px 0px;
+      background-color: #{$main-grey-color};
+    }
+  }
+}
+
+.dark-mode .section__project-stack li {
+  background-color:#{$dark-grey-color};
+}

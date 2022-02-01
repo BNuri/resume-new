@@ -1,7 +1,7 @@
 import React from 'react';
 import SunIcon from './svg/SunIcon';
 import MoonIcon from './svg/MoonIcon';
-import { useGlobalDispatch, useGlobalState } from '../context/GlobalContext';
+import { useGlobalDispatch, useGlobalState } from '../context/ModeContext';
 
 const DarkToggle = () => {
   const state = useGlobalState();

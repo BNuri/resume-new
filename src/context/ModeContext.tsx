@@ -10,8 +10,8 @@ type Action = { type: 'TOGGLE_MODE' };
 
 type ModeDispatch = Dispatch<Action>;
 
-const GlobalStateContext = createContext<State | null>(null);
-const GlobalDispatchContext = createContext<ModeDispatch | null>(null);
+const ModeStateContext = createContext<State | null>(null);
+const ModeDispatchContext = createContext<ModeDispatch | null>(null);
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
@@ -31,22 +31,22 @@ const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
     mode: window.localStorage.getItem('MODE') as Mode | 'Light',
   });
   return (
-    <GlobalStateContext.Provider value={state}>
-      <GlobalDispatchContext.Provider value={dispatch}>
+    <ModeStateContext.Provider value={state}>
+      <ModeDispatchContext.Provider value={dispatch}>
         {children}
-      </GlobalDispatchContext.Provider>
-    </GlobalStateContext.Provider>
+      </ModeDispatchContext.Provider>
+    </ModeStateContext.Provider>
   );
 };
 
 const useGlobalState = () => {
-  const state = useContext(GlobalStateContext);
+  const state = useContext(ModeStateContext);
   if (!state) throw new Error('Cannot find GlobalStateProvider');
   return state;
 };
 
 const useGlobalDispatch = () => {
-  const dispatch = useContext(GlobalDispatchContext);
+  const dispatch = useContext(ModeDispatchContext);
   if (!dispatch) throw new Error('Cannot find GlobalDispatchProvider');
   return dispatch;
 };

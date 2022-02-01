@@ -4,6 +4,7 @@
 html, body, #root, .layout {
   width: 100%;
   height: 100%;
+  overflow: auto;
 }
 
 .layout {
@@ -79,8 +80,4 @@ a:hover {
   svg {
     fill: url(#hover-gradient) #{$main-purple-color};
   }
-}
-
-i {
-  line-height: normal !important;
 }
