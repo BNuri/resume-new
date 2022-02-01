@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@import "./utils/variables";
+
+html, body, #root, .layout {
+  width: 100%;
+  height: 100%;
+}
+
+.layout {
+  padding-top: 100px;
+}
+
+.dark-mode {
+  background-color: #121212;
+  opacity: 90%;
+  color: #{$dark-text-color};
+
+  svg {
+    fill: #{$dark-text-color};
+  }
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  color: #{$main-text-color};
+  transition: all 0.2s linear;
+
+  svg {
+    fill: #{$main-text-color};
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+main {
+  padding: 30px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dark-mode a:hover{
+  background: transparent;
+  background: -webkit-linear-gradient(to left, #c0392b, #8e44ad);
+  background: -moz-linear-gradient(to left, #c0392b, #8e44ad);
+  background: -o-linear-gradient(to left, #c0392b, #8e44ad);
+  background: linear-gradient(to left, #c0392b, #8e44ad);
+  -webkit-background-clip: text;
+  color: #{$dark-purple-color};
+  -webkit-text-fill-color: transparent;
+  svg {
+    fill: url(#hover-gradient) #{$dark-purple-color};
+  }
+}
+
+a:hover {
+  background: transparent;
+  background: -webkit-linear-gradient(to left, #c0392b, #8e44ad);
+  background: -moz-linear-gradient(to left, #c0392b, #8e44ad);
+  background: -o-linear-gradient(to left, #c0392b, #8e44ad);
+  background: linear-gradient(to left, #c0392b, #8e44ad);
+  -webkit-background-clip: text;
+  color: #{$main-purple-color};
+  -webkit-text-fill-color: transparent;
+
+  svg {
+    fill: url(#hover-gradient) #{$main-purple-color};
+  }
+}
+
+i {
+  line-height: normal !important;
+}

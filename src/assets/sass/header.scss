@@ -1,0 +1,53 @@
+@import "./utils/variables";
+.dark-mode .header{
+  background: -webkit-linear-gradient(
+                  #{$dark-grey-color} 20%,
+                  rgba(0, 0, 0, 0)
+  );
+  background: -moz-linear-gradient(
+                  #{$dark-grey-color} 20%,
+                  rgba(0, 0, 0, 0)
+  );
+  background: -o-linear-gradient(#{$dark-grey-color} 20%, rgba(0, 0, 0, 0));
+  background: linear-gradient(#{$dark-grey-color} 20%, rgba(0, 0, 0, 0));
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: -webkit-linear-gradient(
+                  #{$main-grey-color} 20%,
+                  rgba(0, 0, 0, 0)
+  );
+  background: -moz-linear-gradient(
+                  #{$main-grey-color} 20%,
+                  rgba(0, 0, 0, 0)
+  );
+  background: -o-linear-gradient(#{$main-grey-color} 20%, rgba(0, 0, 0, 0));
+  background: linear-gradient(#{$main-grey-color} 20%, rgba(0, 0, 0, 0));
+}
+
+@media (max-width: 500px) {
+  .header__column-item:nth-child(2) span,
+  .header__column-item:nth-child(3) span,
+  .header__column-item:nth-child(4) span {
+    display: none;
+  }
+}
+
+.header__column,
+.header__column-item,
+.header__column-item a{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 5px;
+}
