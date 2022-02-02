@@ -33,19 +33,19 @@ const toyprojects = [
     siteLink: 'https://goofy-knuth-6c2cbf.netlify.com',
     gitHubLink: 'https://github.com/BNuri/nomflex',
   },
-  {
-    period: '2019.06-2019.12',
-    title: 'Wetube',
-    description: [
-      `동영상 공유 사이트입니다.`,
-      `Github, Facebook 혹은 이메일을 통해 회원가입을 할 수 있습니다.`,
-      `동영상을 녹화하거나 업로드할 수 있으며, 조회할 수 있습니다.`,
-      `파일은 AWS S3로 관리하고 있으며, heroku에 배포하였습니다.`,
-    ],
-    stack: ['JavaScript', 'NodeJS', 'ES6', 'Express', 'MongoDB'],
-    siteLink: 'https://whispering-ocean-42081.herokuapp.com',
-    gitHubLink: 'https://github.com/BNuri/wetube',
-  },
+  // {
+  //   period: '2019.06-2019.12',
+  //   title: 'Wetube',
+  //   description: [
+  //     `동영상 공유 사이트입니다.`,
+  //     `Github, Facebook 혹은 이메일을 통해 회원가입을 할 수 있습니다.`,
+  //     `동영상을 녹화하거나 업로드할 수 있으며, 조회할 수 있습니다.`,
+  //     `파일은 AWS S3로 관리하고 있으며, heroku에 배포하였습니다.`,
+  //   ],
+  //   stack: ['JavaScript', 'NodeJS', 'ES6', 'Express', 'MongoDB'],
+  //   siteLink: 'https://whispering-ocean-42081.herokuapp.com',
+  //   gitHubLink: 'https://github.com/BNuri/wetube',
+  // },
 ];
 
 const careers = [
@@ -154,19 +154,19 @@ const educations = [
   {
     period: '2020.03',
     title: 'ReactJS Online Bootcamp 수료',
-    description: ['React, ES6 이론 학습', 'Nomflex 프로젝트 실습'],
+    description: ['React, ES6 이론 학습', '넷플릭스 클론 프로젝트'],
     stack: ['React', 'ES6', 'Styled Components'],
   },
   {
     period: '2020.01',
     title: 'HTML/CSS Online Bootcamp 수료',
-    description: ['HTML, CSS 이론 학습', 'Kokoa Talk 프로젝트 실습'],
+    description: ['HTML, CSS 이론 학습', '카카오톡 HTML/CSS 클론 프로젝트'],
     stack: ['HTML5', 'CSS3'],
   },
   {
     period: '2019.12',
     title: 'VanillaJS Online Bootcamp 수료',
-    description: ['VanillaJS 이론 학습', 'wetube 프로젝트 실습'],
+    description: ['VanillaJS 이론 학습', '유튜브 클론 프로젝트'],
     stack: ['JavaScript', 'ES6'],
   },
   {
