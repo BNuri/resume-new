@@ -1,5 +1,6 @@
 {
   "name": "typescript-resume",
+  "homepage": "https://BNuri.github.io/resume-new",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
