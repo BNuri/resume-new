@@ -17,3 +17,47 @@
     @content;
   }
 }
+
+@mixin gradientTextBackground($color) {
+  background: transparent;
+  background: -webkit-linear-gradient(to left, #c0392b, #8e44ad);
+  background: -moz-linear-gradient(to left, #c0392b, #8e44ad);
+  background: -o-linear-gradient(to left, #c0392b, #8e44ad);
+  background: linear-gradient(to left, #c0392b, #8e44ad);
+  -webkit-background-clip: text;
+  color: $color;
+  -webkit-text-fill-color: transparent;
+
+  svg {
+    fill: url(#hover-gradient) $color;
+  }
+}
+
+@mixin gradientBackground($color) {
+  background: -webkit-linear-gradient(
+                  $color 20%,
+                  rgba(0, 0, 0, 0)
+  );
+  background: -moz-linear-gradient(
+                  $color 20%,
+                  rgba(0, 0, 0, 0)
+  );
+  background: -o-linear-gradient($color 20%, rgba(0, 0, 0, 0));
+  background: linear-gradient($color 20%, rgba(0, 0, 0, 0));
+}
+
+@mixin title-text {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@mixin subtitle-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@mixin subsubtitle-text {
+  font-size: 16px;
+  font-weight: 700;
+}
+

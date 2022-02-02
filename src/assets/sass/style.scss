@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "./utils/variables";
+@import "./reset", "./section";
 
 html, body, #root, .layout {
   width: 100%;
@@ -11,16 +12,6 @@ html, body, #root, .layout {
   padding-top: 100px;
 }
 
-.dark-mode {
-  background-color: #121212;
-  opacity: 90%;
-  color: #{$dark-text-color};
-
-  svg {
-    fill: #{$dark-text-color};
-  }
-}
-
 body {
   font-family: "Nanum Gothic", sans-serif;
   color: #{$main-text-color};
@@ -28,6 +19,16 @@ body {
 
   svg {
     fill: #{$main-text-color};
+  }
+
+  .dark-mode {
+    background-color: #121212;
+    opacity: 90%;
+    color: #{$dark-text-color};
+
+    svg {
+      fill: #{$dark-text-color};
+    }
   }
 }
 
@@ -54,30 +55,9 @@ a {
 }
 
 .dark-mode a:hover{
-  background: transparent;
-  background: -webkit-linear-gradient(to left, #c0392b, #8e44ad);
-  background: -moz-linear-gradient(to left, #c0392b, #8e44ad);
-  background: -o-linear-gradient(to left, #c0392b, #8e44ad);
-  background: linear-gradient(to left, #c0392b, #8e44ad);
-  -webkit-background-clip: text;
-  color: #{$dark-purple-color};
-  -webkit-text-fill-color: transparent;
-  svg {
-    fill: url(#hover-gradient) #{$dark-purple-color};
-  }
+  @include gradientTextBackground($dark-purple-color);
 }
 
 a:hover {
-  background: transparent;
-  background: -webkit-linear-gradient(to left, #c0392b, #8e44ad);
-  background: -moz-linear-gradient(to left, #c0392b, #8e44ad);
-  background: -o-linear-gradient(to left, #c0392b, #8e44ad);
-  background: linear-gradient(to left, #c0392b, #8e44ad);
-  -webkit-background-clip: text;
-  color: #{$main-purple-color};
-  -webkit-text-fill-color: transparent;
-
-  svg {
-    fill: url(#hover-gradient) #{$main-purple-color};
-  }
+  @include gradientTextBackground($main-purple-color);
 }

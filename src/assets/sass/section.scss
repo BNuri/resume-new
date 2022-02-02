@@ -1,71 +1,49 @@
 @import "./utils/mixin";
 @import "./utils/variables";
 
-@include mobile {
-  .section {
-    width: 90%;
-  }
-  .section__project {
-    flex-direction: column;
-    align-items: start !important;
-    padding: 20px 0px !important;
-
-    header,
-    &-content {
-      width: 100% !important;
-    }
-  }
-}
-
-@include tablet {
-  .section {
-    width: 60%;
-  }
-}
-
-@include desktop {
-  .section {
-    width: 70%;
-  }
-}
-
 .section {
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   transition: all 0.2s linear;
-}
 
-.section__title {
-  padding-bottom: 10px;
-  font-size: 24px;
-  font-weight: 700;
-  border-bottom: 2px solid #4a4a4a;
-}
+  @include mobile {
+    width: 90%;
+  }
 
-.section__title-s {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  font-size: 20px;
-  font-weight: 700;
-}
+  @include tablet {
+    width: 60%;
+  }
 
-.section__subtitle,
-.section__project-title{
-  padding: 10px 0px;
-  font-size: 18px;
-  font-weight: 700;
-  display: inline-block;
-}
+  @include desktop {
+    width: 70%;
+  }
 
-.section__subtitle-s,
-.section__project-subtitle{
-  display: block;
-  padding-bottom: 10px;
-  font-size: 14px;
-  font-weight: 700;
-  opacity: 0.6;
+  &__title {
+    @include title-text;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4a4a4a;
+  }
+
+  &__title-s {
+    @include subtitle-text;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  &__subtitle {
+    @include subtitle-text;
+    padding: 10px 0px;
+    display: inline-block;
+  }
+
+  &__subtitle-s {
+    @include subsubtitle-text;
+    display: block;
+    padding-bottom: 10px;
+    opacity: 0.6;
+  }
 }
 
 .certificate-content {
@@ -83,6 +61,17 @@
   header,
   &-content {
     line-height: 1.4;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: start !important;
+    padding: 20px 0px !important;
+
+    header,
+    &-content {
+      width: 100% !important;
+    }
   }
 
   header {
@@ -118,9 +107,9 @@
       margin: 3px 3px 3px 0px;
       background-color: #{$main-grey-color};
     }
-  }
-}
 
-.dark-mode .section__project-stack li {
-  background-color:#{$dark-grey-color};
+    @at-root .dark-mode .section__project-stack li {
+      background-color:#{$dark-grey-color};
+    }
+  }
 }

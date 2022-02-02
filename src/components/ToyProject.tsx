@@ -11,7 +11,7 @@ const ToyProject: React.FC = () => {
         {toyprojects.map(project => (
           <li className="section__project">
             <header>
-              <h3 className="section__project-title">{project.title}</h3>
+              <h3 className="section__subtitle">{project.title}</h3>
               {project.siteLink && (
                 <a href={project.siteLink}>
                   <GlobeIcon />
@@ -22,9 +22,7 @@ const ToyProject: React.FC = () => {
                   <GithubIcon />
                 </a>
               )}
-              <span className="section__project-subtitle">
-                {project.period}
-              </span>
+              <span className="section__subtitle-s">{project.period}</span>
             </header>
             <div className="section__project-content">
               <ul className="section__project-desc">

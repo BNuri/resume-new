@@ -1,16 +1,5 @@
 @import "./utils/variables";
-.dark-mode .header{
-  background: -webkit-linear-gradient(
-                  #{$dark-grey-color} 20%,
-                  rgba(0, 0, 0, 0)
-  );
-  background: -moz-linear-gradient(
-                  #{$dark-grey-color} 20%,
-                  rgba(0, 0, 0, 0)
-  );
-  background: -o-linear-gradient(#{$dark-grey-color} 20%, rgba(0, 0, 0, 0));
-  background: linear-gradient(#{$dark-grey-color} 20%, rgba(0, 0, 0, 0));
-}
+@import "./utils/mixin";
 
 .header {
   height: 100px;
@@ -23,16 +12,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: -webkit-linear-gradient(
-                  #{$main-grey-color} 20%,
-                  rgba(0, 0, 0, 0)
-  );
-  background: -moz-linear-gradient(
-                  #{$main-grey-color} 20%,
-                  rgba(0, 0, 0, 0)
-  );
-  background: -o-linear-gradient(#{$main-grey-color} 20%, rgba(0, 0, 0, 0));
-  background: linear-gradient(#{$main-grey-color} 20%, rgba(0, 0, 0, 0));
+  @include gradientBackground($main-grey-color);
+}
+
+.dark-mode .header{
+  @include gradientBackground($dark-grey-color);
 }
 
 @media (max-width: 500px) {

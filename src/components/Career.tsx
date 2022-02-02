@@ -16,10 +16,8 @@ const Career: React.FC = () => {
             {company.projects.map(project => (
               <li className="section__project">
                 <header>
-                  <h3 className="section__project-title">{project.title}</h3>
-                  <span className="section__project-subtitle">
-                    {project.period}
-                  </span>
+                  <h3 className="section__subtitle">{project.title}</h3>
+                  <span className="section__subtitle-s">{project.period}</span>
                 </header>
                 <div className="section__project-content">
                   <ul className="section__project-desc">

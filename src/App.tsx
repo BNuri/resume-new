@@ -1,7 +1,5 @@
 import React from 'react';
-import './assets/sass/reset.scss';
 import './assets/sass/style.scss';
-import './assets/sass/section.scss';
 import { GlobalProvider } from './context/ModeContext';
 import Layout from './components/Layout';
 import Career from './components/Career';
